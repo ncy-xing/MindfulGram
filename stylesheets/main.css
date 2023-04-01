@@ -5,7 +5,7 @@
     color: #0000CC;
  }
  .blog-image {
-  width: 250px;
+  width: 450px;
  }
 
  /*
@@ -156,7 +156,14 @@ body {
   }
   .blog-post-meta {
     margin-bottom: 20px;
-    color: #999;
+  }
+  .blog-post-username {
+    font-weight: bold;
+    color: #191919;
+  }
+  .blog-post-timestamp {
+    font-weight: bold;
+    color: grey;
   }
   
   
@@ -173,5 +180,15 @@ body {
   }
   .blog-footer p:last-child {
     margin-bottom: 0;
+  }
+
+  /*
+  * Images
+  */
+  .profile-image {
+    border-radius: 50% !important;
+    width: 50px;
+    height: 50px;
+    vertical-align:top;
   }
   
