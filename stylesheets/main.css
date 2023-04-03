@@ -155,8 +155,6 @@ body {
     margin-bottom: 5px;
     font-size: 40px;
   }
-
-
   .blog-post-username {
     font-weight: bold;
     color: #191919;
@@ -164,6 +162,9 @@ body {
   .blog-post-timestamp {
     font-weight: bold;
     color: grey;
+  }
+  .blog-post-meta {
+    padding-bottom: 20px;
   }
   
   
