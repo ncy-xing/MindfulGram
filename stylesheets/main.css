@@ -7,7 +7,13 @@
  .blog-image {
   margin: auto;
   display: block;
-  width: 50%;
+  width: 95%;
+  padding-top: 20px;
+ }
+
+ * {
+  margin: 0;
+  padding: 0;
  }
 
  /*
@@ -151,7 +157,6 @@ body {
     margin: auto;
     width: 50%;
     padding: 20px;
-    border: 3px solid green;
   }
   .blog-post-title {
     margin-bottom: 5px;
@@ -169,8 +174,10 @@ body {
   .blog-post-meta {
     margin: auto;
     width: 50%;
-    padding-bottom: 20px;
-    border: 3px solid green;
+    padding: 20px;
+    background-color: ghostwhite;
+    border-radius: 25px;
+    border: 3px solid #333;
   }
   
   
