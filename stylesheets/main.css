@@ -192,4 +192,35 @@ body {
     height: 50px;
     vertical-align:top;
   }
+
+  .likeButton{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-color: lightgray;
+    }
+
+    .button:before,
+
+    .button:after {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background-color: lightgray, 1;
+    }
+
+    .button:before{
+     bottom: 0px;
+     left: -100px;
+    }
+
+    .button:after{
+     top: -100px;
+     right: 0px;
+    }
   
