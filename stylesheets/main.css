@@ -193,34 +193,27 @@ body {
     vertical-align:top;
   }
 
-  .likeButton{
-    width: 50px;
-    height: 50px;
-    position: relative;
-    background-color: lightgray;
-    }
+  .btn .fa.fa-heart {
+    background-color: transparent; /* no background */
+    border: none; /* Remove borders */
+    color: lightgray; /* icon color = text color */
+    padding: 6px 10px; /* Some padding */
+    font-size: 26px; /* icon = font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
 
-    .button:before,
-
-    .button:after {
-      position: relative;
-      width: 200px;
-      height: 200px;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-      background-color: lightgray, 1;
-    }
-
-    .button:before{
-     bottom: 0px;
-     left: -100px;
-    }
-
-    .button:after{
-     top: -100px;
-     right: 0px;
-    }
+  .btn.liked .fa.fa-heart{
+    color: red; /*Changing the color of the button to red.*/
+    background-color: transparent;
+    border: none;
+  }
   
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: transparent;
+    color: gray
+  }
+
+
+
+
