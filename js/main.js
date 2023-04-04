@@ -1,20 +1,22 @@
 const btn = document.querySelector('.btn');
 let isRed = false; //like button starts (unliked) gray
 
-if (btn) {
-    btn.addEventListener('click', likeButton);
-  }
-  
-function likeButton(){
-    if(!isRed){
-        btn.style.color = "red";
-        isRed = true;
-    }
-    else{ 
-        btn.style.color = "lightgray";
-        isRed = false;
-    }
+function clickButton(){
+    btn.classList.toggle('liked');
+      
 }
+btn.addEventListener('click', clickButton)
+
+// function likeButton(){
+//     if(!isRed){
+//         btn.style.color = "red";
+//         isRed = true;
+//     }
+//     else{ 
+//         btn.style.color = "lightgray";
+//         isRed = false;
+//     }
+// }
 
 // function clickButton(){
 //     var element = document.getElementById(btn);

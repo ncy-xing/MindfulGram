@@ -193,7 +193,7 @@ body {
     vertical-align:top;
   }
 
-  .btn .fa.fa-heart {
+  .btn {
     background-color: transparent; /* no background */
     border: none; /* Remove borders */
     color: lightgray; /* icon color = text color */
@@ -202,7 +202,7 @@ body {
     cursor: pointer; /* Mouse pointer on hover */
   }
 
-  .btn.liked .fa.fa-heart{
+  .liked{
     color: red; /*Changing the color of the button to red.*/
     background-color: transparent;
     border: none;
