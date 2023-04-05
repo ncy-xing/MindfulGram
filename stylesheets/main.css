@@ -194,7 +194,7 @@ body {
   }
   
   
- .btn i.fa.fa-heart::before {
+ .btn ::before {
     content: "\f004"; /* FontAwesome heart icon */
     background-color: transparent; /* no background */
     border: none; /* Remove borders */
@@ -206,7 +206,7 @@ body {
     cursor: pointer; /* Mouse pointer on hover */
 }
 
-.btn.liked i.fa.fa-heart::before {
+.btn.liked ::before {
     color: red; /* Changing the color of the button to red. */
     background-color: transparent;
     border-style: none;
