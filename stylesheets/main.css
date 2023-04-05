@@ -206,7 +206,13 @@ body {
     vertical-align:top;
   }
   
-  
+  .btn {
+    background-color: transparent; /* no background */
+    border: none; /* Remove borders */
+    border-style: none;
+    border-color: transparent;
+  }
+
  .btn ::before {
     content: "\f004"; /* FontAwesome heart icon */
     background-color: transparent; /* no background */
