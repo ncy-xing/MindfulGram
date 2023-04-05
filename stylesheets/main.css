@@ -53,6 +53,7 @@ h6,
 .container {
   /* colors from https://mdbootstrap.com/docs/standard/tools/design/gradients/ */
   background-image: linear-gradient(to bottom, rgba(168, 237, 234, 0.5), rgba(254, 214, 227, 0.5));
+    padding-bottom: 100px;
 }
 
 
@@ -126,45 +127,42 @@ h6,
 /*
    * Main column and sidebar layout
    */
-
-.blog-main {
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-/* Sidebar modules for boxing content */
-.sidebar-module {
-  padding: 15px;
-  margin: 0 -15px 15px;
-}
-
-.sidebar-module-inset {
-  padding: 15px;
-  background-color: #f5f5f5;
-  border-radius: 4px;
-}
-
-.sidebar-module-inset p:last-child,
-.sidebar-module-inset ul:last-child,
-.sidebar-module-inset ol:last-child {
-  margin-bottom: 0;
-}
-
-
-/* Pagination */
-.pager {
-  text-align: left;
-}
-
-.pager>li>a {
-  width: 140px;
-  padding: 10px 20px;
-  text-align: center;
-  border-radius: 30px;
-}
-
-
-/*
+  
+  .blog-main {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  /* Sidebar modules for boxing content */
+  .sidebar-module {
+    padding: 15px;
+    margin: 0 -15px 15px;
+  }
+  .sidebar-module-inset {
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }
+  .sidebar-module-inset p:last-child,
+  .sidebar-module-inset ul:last-child,
+  .sidebar-module-inset ol:last-child {
+    margin-bottom: 0;
+  }
+  
+  
+  /* Pagination */
+  .pager {
+    text-align: center;
+  }
+  .pager > li > a {
+    width: 140px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 30px;
+  }
+  
+  
+  /*
    * Blog posts
    */
 
