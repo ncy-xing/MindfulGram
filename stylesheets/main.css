@@ -192,27 +192,33 @@ body {
     height: 50px;
     vertical-align:top;
   }
-
-  .btn {
+  
+  
+ .btn i.fa.fa-heart::before {
+    content: "\f004"; /* FontAwesome heart icon */
     background-color: transparent; /* no background */
     border: none; /* Remove borders */
+    border-style: none;
+    border-color: transparent;
     color: lightgray; /* icon color = text color */
     padding: 6px 10px; /* Some padding */
     font-size: 26px; /* icon = font size */
     cursor: pointer; /* Mouse pointer on hover */
-  }
+}
 
-  .liked{
-    color: red; /*Changing the color of the button to red.*/
+.btn.liked i.fa.fa-heart::before {
+    color: red; /* Changing the color of the button to red. */
     background-color: transparent;
-    border: none;
-  }
-  
-  /* Darker background on mouse-over */
-  .btn:hover {
+    border-style: none;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
     background-color: transparent;
-    color: gray
-  }
+    border-style: none;
+    color: gray;
+}
+
 
 
 
