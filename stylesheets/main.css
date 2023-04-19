@@ -262,3 +262,63 @@ h6,
     border-style: none;
     color: gray;
 }
+
+
+/*
+ * Sidebar derived from Hyde.
+ */
+
+ .sidebar {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: rgba(255,255,255,.5);
+  background-color: #202020;
+}
+@media (min-width: 48em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 14rem;
+    text-align: left;
+  }
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: #fff;
+}
+
+/* About section */
+.sidebar-about h1 {
+  color: #fff;
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  margin-bottom: 1rem;
+}
+.sidebar-nav-item {
+  text-decoration: none;
+  display: block;
+  line-height: 1.75;
+  border-radius: 20px;
+}
+
+a.sidebar-nav-item:hover {
+  background-color: #333;
+  border-radius: 20px;
+  transition: background-color .2s ease-in;
+}
+
+.sidebar-nav-item.active {
+  font-weight: bold;
+}
+
+.icon{
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+}
