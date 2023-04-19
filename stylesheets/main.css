@@ -113,9 +113,11 @@ h6,
 
 .blog-title {
   margin-top: 30px;
-  margin-bottom: 0;
-  font-size: 60px;
-  font-weight: normal;
+  margin-bottom: 30px;
+  font-family: Didot, Palatino, URW Palladio L, serif;
+  font-weight: bold;
+  font-size: 30px;
+  color:#fff;
 }
 
 .blog-description {
@@ -133,7 +135,7 @@ h6,
     line-height: 1.5;
   }
   
-  /* Sidebar modules for boxing content */
+  /* Disused Sidebar modules for boxing content */
   .sidebar-module {
     padding: 15px;
     margin: 0 -15px 15px;
@@ -305,13 +307,15 @@ h6,
   text-decoration: none;
   display: block;
   line-height: 1.75;
-  border-radius: 20px;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 a.sidebar-nav-item:hover {
   background-color: #333;
-  border-radius: 20px;
   transition: background-color .2s ease-in;
+  font-weight: bold;
 }
 
 .sidebar-nav-item.active {
