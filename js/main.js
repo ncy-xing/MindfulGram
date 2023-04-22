@@ -27,12 +27,11 @@ let data = ["image", "image-2"];
 data.forEach(loadPost);
 
 function loadPost(value){
-    // var img = new Image();
-    // img.src = value + ".jpg";
     console.log(value);
-    var div = document.createElement("img");
+    var div = document.createElement("img"); 
     div.setAttribute("src", "assets/" + value + ".jpg");
-    document.getElementById("test").appendChild(div);
+    div.setAttribute("class", "blog-image");
+    document.body.appendChild(div);
 }
 
 /**
@@ -40,6 +39,7 @@ function loadPost(value){
  */
 
 const instaPost = {
+    id: 1,
     pfName: "",
     pfImage: "",
     postTimeStamp: 0,
