@@ -1,117 +1,142 @@
 /* Custom CSS */
 .example-blue-style {
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    color: #0000CC;
- }
- .blog-image {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #0000CC;
+}
+
+.blog-image {
   margin: auto;
   display: block;
   width: 95%;
   padding-top: 20px;
- }
+  padding-bottom: 10px;
+}
 
- * {
+* {
   margin: 0;
   padding: 0;
- }
+}
 
- /*
+/*
  * Globals
  */
 
 body {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    color: #555;
-  }
-  
-  h1, .h1,
-  h2, .h2,
-  h3, .h3,
-  h4, .h4,
-  h5, .h5,
-  h6, .h6 {
-    margin-top: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: normal;
-    color: #333;
-  }
-  
-  
-  /*
+  font-family: Helvetica, Arial, sans-serif;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  min-height:100vh;
+}
+
+footer {
+  margin-top: auto;
+
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+
+/*
    * Override Bootstrap's default container.
    */
-  
-  .container {
-    /* colors from https://mdbootstrap.com/docs/standard/tools/design/gradients/ */
-    background-image: linear-gradient(to bottom,  rgba(168,237,234,0.5), rgba(254,214,227,0.5));
-  }
-  
-  
-  /*
+
+.container {
+  /* colors from https://mdbootstrap.com/docs/standard/tools/design/gradients/ */
+  background-image: linear-gradient(to bottom, rgba(168, 237, 234, 0.5), rgba(254, 214, 227, 0.5));
+    padding-bottom: 250px;
+
+
+}
+
+
+/*
    * Masthead for nav
    */
-  
-  .blog-masthead {
-    background-color: #428bca;
-    -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
-            box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
-  }
-  
-  /* Nav links */
-  .blog-nav-item {
-    position: relative;
-    display: inline-block;
-    padding: 10px;
-    font-weight: 500;
-    color: #cdddeb;
-  }
-  .blog-nav-item:hover,
-  .blog-nav-item:focus {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Active state gets a caret at the bottom */
-  .blog-nav .active {
-    color: #fff;
-  }
-  .blog-nav .active:after {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 0;
-    margin-left: -5px;
-    vertical-align: middle;
-    content: " ";
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid;
-    border-left: 5px solid transparent;
-  }
-  
-  
-  /*
+
+.blog-masthead {
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0, 0, 0, .1);
+  box-shadow: inset 0 -2px 5px rgba(0, 0, 0, .1);
+}
+
+/* Nav links */
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: #cdddeb;
+}
+
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+  color: #fff;
+}
+
+.blog-nav .active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
+}
+
+
+/*
    * Blog name and description
    */
-  
-  .blog-header {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  .blog-title {
-    margin-top: 30px;
-    margin-bottom: 0;
-    font-size: 60px;
-    font-weight: normal;
-  }
-  .blog-description {
-    font-size: 20px;
-    color: #999;
-  }
-  
-  
-  /*
+
+.blog-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.blog-title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: Didot, Palatino, URW Palladio L, serif;
+  font-weight: bold;
+  font-size: 30px;
+  color:#fff;
+}
+
+.blog-description {
+  font-size: 20px;
+  color: #999;
+}
+
+
+/*
    * Main column and sidebar layout
    */
   
@@ -120,7 +145,7 @@ body {
     line-height: 1.5;
   }
   
-  /* Sidebar modules for boxing content */
+  /* Disused Sidebar modules for boxing content */
   .sidebar-module {
     padding: 15px;
     margin: 0 -15px 15px;
@@ -135,70 +160,77 @@ body {
   .sidebar-module-inset ol:last-child {
     margin-bottom: 0;
   }
-  
-  
-  /* Pagination */
-  .pager {
-    text-align: left;
+  /*Used for the setting*/
+  #bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
-  .pager > li > a {
-    width: 140px;
-    padding: 10px 20px;
-    text-align: center;
-    border-radius: 30px;
-  }
+  
   
   
   /*
    * Blog posts
    */
-  
-  .blog-post {
-    margin: auto;
-    width: 50%;
-    padding: 20px;
-  }
-  .blog-post-title {
-    margin-bottom: 5px;
-    font-size: 40px;
-  }
-  .blog-post-username {
-    font-weight: bold;
-    color: #191919;
-  }
-  .blog-post-timestamp {
-    font-weight: bold;
-    color: grey;
-  }
 
-  .blog-post-meta {
-    margin: auto;
-    width: 50%;
-    padding: 20px;
-    background-color: ghostwhite;
-    border-radius: 25px;
-    border: 3px solid #333;
-  }
-  
-  
-  /*
+.blog-post {
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+}
+
+.blog-post-title {
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+
+.blog-post-username {
+  font-weight: bold;
+  color: #191919;
+}
+
+.blog-post-timestamp {
+  font-weight: bold;
+  color: grey;
+}
+
+.blog-post-meta {
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+  background-color: ghostwhite;
+  border-radius: 25px;
+  border: 3px solid #333;
+}
+
+.blog-post-text {
+  margin: auto;
+  display: block;
+  width: 95%;
+}
+
+
+/*
    * Footer
    */
-  
-  .blog-footer {
-    padding: 40px 0;
-    color: #999;
-    text-align: center;
-    background-color: #f9f9f9;
-    border-top: 1px solid #e5e5e5;
-  }
-  .blog-footer p:last-child {
-    margin-bottom: 0;
-  }
 
-  /*
+.blog-footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+/*
   * Images
   */
+
+
   .profile-image {
     border-radius: 50% !important;
     width: 50px;
@@ -213,20 +245,20 @@ body {
     border-color: transparent;
   }
 
- .btn ::before {
+ .btn ::before{
     content: "\f004"; /* FontAwesome heart icon */
     background-color: transparent; /* no background */
     border: none; /* Remove borders */
     border-style: none;
     border-color: transparent;
-    color: red; /* icon color = text color */
+    color: lightgray; /* icon color = text color */
     padding: 6px 10px; /* Some padding */
     font-size: 26px; /* icon = font size */
     cursor: pointer; /* Mouse pointer on hover */
 }
 
-.btn.liked ::before {
-    color: lightgray; /* Changing the color of the button to red. */
+.btn:visited {
+    color: red; /* Changing the color of the button to red. */
     background-color: transparent;
     border-style: none;
 }
@@ -238,7 +270,109 @@ body {
     color: gray;
 }
 
+/*
+* Prev/Next button format from W3 schools
+*/
+.ctrlBotton1 {
+  background-color: transparent; /* Green */
+  color: black;
+  border-color: black;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
 
+.ctrlBotton2 {
+  background-color: transparent; /* Green */
+  color: black;
+  border-color: black;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
 
+.right{
+  float: right;
+  right: 150px;
+}
 
+.left{
+  float:left;
+  left: 350px;
+}
 
+.sticky {
+  position: sticky;
+  width: 5.5%;
+}
+
+/*
+ * Sidebar derived from Hyde.
+ */
+
+ .sidebar {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: rgba(255,255,255,.5);
+  background-color: #202020;
+}
+@media (min-width: 48em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 14rem;
+    text-align: left;
+  }
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: #fff;
+}
+
+/* About section */
+.sidebar-about h1 {
+  color: #fff;
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  margin-bottom: 1rem;
+}
+.sidebar-nav-item {
+  text-decoration: none;
+  display: block;
+  line-height: 1.75;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+a.sidebar-nav-item:hover {
+  background-color: #333;
+  transition: background-color .2s ease-in;
+  font-weight: bold;
+}
+
+.sidebar-nav-item.active {
+  font-weight: bold;
+}
+
+.icon{
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+}
