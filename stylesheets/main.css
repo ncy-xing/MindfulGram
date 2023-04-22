@@ -25,6 +25,14 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   color: #555;
+  display: flex;
+  flex-direction: column;
+  min-height:100vh;
+}
+
+footer {
+  margin-top: auto;
+
 }
 
 h1,
@@ -53,7 +61,9 @@ h6,
 .container {
   /* colors from https://mdbootstrap.com/docs/standard/tools/design/gradients/ */
   background-image: linear-gradient(to bottom, rgba(168, 237, 234, 0.5), rgba(254, 214, 227, 0.5));
-    padding-bottom: 100px;
+    padding-bottom: 250px;
+
+
 }
 
 
@@ -150,23 +160,13 @@ h6,
   .sidebar-module-inset ol:last-child {
     margin-bottom: 0;
   }
-  
+  /*Used for the setting*/
   #bottom {
     position: absolute;
     bottom: 0;
     left: 0;
   }
   
-  /* Pagination */
-  .pager {
-    text-align: center;
-  }
-  .pager > li > a {
-    width: 140px;
-    padding: 10px 20px;
-    text-align: center;
-    border-radius: 30px;
-  }
   
   
   /*
@@ -270,6 +270,51 @@ h6,
     color: gray;
 }
 
+/*
+* Prev/Next button format from W3 schools
+*/
+.ctrlBotton1 {
+  background-color: transparent; /* Green */
+  color: black;
+  border-color: black;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.ctrlBotton2 {
+  background-color: transparent; /* Green */
+  color: black;
+  border-color: black;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.right{
+  float: right;
+  right: 150px;
+}
+
+.left{
+  float:left;
+  left: 350px;
+}
+
+.sticky {
+  position: sticky;
+  width: 5.5%;
+}
 
 /*
  * Sidebar derived from Hyde.
