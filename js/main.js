@@ -1,50 +1,83 @@
+/**
+ * Load a single post into HTML
+ */
+function loadPost(postData){
+    // post container
+    var post = document.createElement("div"); 
+    post.setAttribute("class", "blog-post");
+    var meta = document.createElement("div");
+    meta.setAttribute("class", "blog-post-meta"); 
 
-// const btn = document.querySelector('.btn');
-// let isRed = false; //like button starts (unliked) gray
+    // Metadata
+    var pfp = document.createElement("img");
+    pfp.setAttribute("class", "profile-image");
+    pfp.setAttribute("src", "assets/" + postData.pfImage + ".jpg");
 
-// btn.addEventListener('click', clickButton())
+    var username = document.createElement("span");
+    username.setAttribute("class", "blog-post-username");
+    username.appendChild(document.createTextNode(postData.username));
 
-// function clickButton(){
-//     if(!isRed){
-//         btn.classList.toggle('liked');
-//         isRed = true;
-        
-//     } else {
-//         btn.classList.toggle('liked');
-//         isRed = false;
-//     }
-// }
+    var timeStamp = document.createElement("span");
+    timeStamp.setAttribute("class", "blog-post-timestamp");
+    timeStamp.appendChild(document.createTextNode(" · ".concat(postData.timeStamp)));
 
-// var img = new Image();
-// var div = document.getElementById('test');
-// img.src = 'assets/image.jpg';
+    // image and caption
+    var img = document.createElement("img"); 
+    img.setAttribute("src", "assets/" + postData.image + ".jpg");
+    img.setAttribute("class", "blog-image");
+    var caption = document.createElement("p");
+    caption.setAttribute("class", "blog-post-text");
+    caption.appendChild(document.createTextNode(postData.comment));
 
-// img.onload = function() {
-//   div.appendChild(img);
-// };
+    // Write HTML
+    var postItems = [pfp, username, timeStamp, img, caption];
+    postItems.forEach(element => {
+        meta.appendChild(element);
+    });
+    post.appendChild(meta);
+    document.getElementById("post-body").appendChild(post);
 
-let data = ["image", "image-2"];
-data.forEach(loadPost);
-
-function loadPost(value){
-    // var img = new Image();
-    // img.src = value + ".jpg";
-    console.log(value);
-    var div = document.createElement("img");
-    div.setAttribute("src", "assets/" + value + ".jpg");
-    document.getElementById("test").appendChild(div);
 }
 
 /**
- * Post's Attributes 
+ * Static post data
  */
+let usernames = ["Friendly_Flower", "lily205", "l.ipsum", "dolorduvec", "FreshRose"]
+let timeStamps = ["3 hours ago", "1 day ago", "2 days ago", "1 week ago", "3 months ago"]
+let comments = ["These are nice ducks.",
+    "Hi! hope everyone is doing well.",
+    "Look at these nice flowers!",
+    "HCI is the coolest class.",
+    "Happy spring, everyone!"]
 
-const instaPost = {
-    pfName: "",
-    pfImage: "",
-    postTimeStamp: 0,
-    postImage: "",
-    //likeButtonState: false,
-    postComment: "",
 
+// const testData = {
+//     id: 1,
+//     username: "Friendly_Flower",
+//     pfImage: "pfp-1",
+//     timeStamp: "1 day ago",
+//     image: "image-1",
+//     //likeButtonState: false,
+//     comment: "These are nice ducks.",
+// }
+
+// loadPost(testData);
+
+for(let i = 0; i < usernames.length; i++){
+    var pfp = "pfp-" + i;
+    var img = "image-" + i;
+
+    console.log(pfp);
+    console.log(img);
+
+    var postData = {
+        id: i,
+        username: usernames[i],
+        pfImage: pfp,
+        timeStamp: timeStamps[i],
+        image: img,
+        comment: comments[i],
+    }
+
+    loadPost(postData);
 }
