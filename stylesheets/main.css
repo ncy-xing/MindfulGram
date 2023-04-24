@@ -148,7 +148,7 @@ h6,
   /* Disused Sidebar modules for boxing content */
   .sidebar-module {
     padding: 15px;
-    margin: 0 -15px 15px;
+    margin: 0 -15px 0px;
   }
   .sidebar-module-inset {
     padding: 15px;
@@ -185,6 +185,7 @@ h6,
 }
 
 .blog-post-username {
+  padding-left: 10px;
   font-weight: bold;
   color: #191919;
 }
@@ -218,8 +219,8 @@ h6,
   padding: 40px 0;
   color: #999;
   text-align: center;
-  background-color: #f9f9f9;
-  border-top: 1px solid #e5e5e5;
+  /* background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5; */
 }
 
 .blog-footer p:last-child {
@@ -245,20 +246,20 @@ h6,
     border-color: transparent;
   }
 
- .btn ::before {
+ .btn ::before{
     content: "\f004"; /* FontAwesome heart icon */
     background-color: transparent; /* no background */
     border: none; /* Remove borders */
     border-style: none;
     border-color: transparent;
-    color: red; /* icon color = text color */
+    color: lightgray; /* icon color = text color */
     padding: 6px 10px; /* Some padding */
     font-size: 26px; /* icon = font size */
     cursor: pointer; /* Mouse pointer on hover */
 }
 
-.btn.liked ::before {
-    color: lightgray; /* Changing the color of the button to red. */
+.btn:visited {
+    color: red; /* Changing the color of the button to red. */
     background-color: transparent;
     border-style: none;
 }
