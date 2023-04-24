@@ -42,18 +42,18 @@ function loadPost(postData){
 /**
  * Static post data
  */
-let usernames = ["Friendly_Flower", "lily205", "l.ipsum", "dolorduvec", "FreshRose"]
-let timeStamps = ["3 hours ago", "1 day ago", "2 days ago", "1 week ago", "3 months ago"]
-let comments = ["These are nice ducks.",
-    "Hi! hope everyone is doing well.",
-    "Look at these nice flowers!",
-    "HCI is the coolest class.",
-    "Happy spring, everyone!"]
+let usernames = ["harryPotterGF_001", "maj3rSick", "lil_$ean8arker", "NormanHacker02", "notLauraT"]
+let timeStamps = ["1 hours ago", "3 hour ago", "2 days ago", "1 months ago", "3 months ago",]
+let comments = ["my patronus is soo cute ;))",
+    "Good day on my mind #sun",
+    "#wouldRatherBeCoding",
+    "Keeping my prinicples.",
+    "Maine sunset."]
 
 
 for(let i = 0; i < usernames.length; i++){
-    var pfp = "pfp-" + i;
-    var img = "image-" + i;
+    var pfp = "pfp-" + (i+ 5);
+    var img = "image-" + (i+5);
 
     console.log(pfp);
     console.log(img);
