@@ -376,3 +376,10 @@ a.sidebar-nav-item:hover {
   padding-inline-start: 10px;
   padding-inline-end: 10px;
 }
+
+/* settings page formatting */
+.settings{
+  padding: 10px 500px 20px;
+  color: #302d2d;
+  text-align: left;
+}
