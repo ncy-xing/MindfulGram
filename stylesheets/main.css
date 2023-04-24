@@ -162,9 +162,8 @@ h6,
   }
   /*Used for the setting*/
   #bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: relative;
+    top: 200px;
   }
   
   
