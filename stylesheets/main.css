@@ -140,39 +140,35 @@ h6,
    * Main column and sidebar layout
    */
 
-.blog-main {
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-/* Disused Sidebar modules for boxing content */
-.sidebar-module {
-  padding: 15px;
-  margin: 0 -15px 0px;
-}
-
-.sidebar-module-inset {
-  padding: 15px;
-  background-color: #f5f5f5;
-  border-radius: 4px;
-}
-
-.sidebar-module-inset p:last-child,
-.sidebar-module-inset ul:last-child,
-.sidebar-module-inset ol:last-child {
-  margin-bottom: 0;
-}
-
-/*Used for the setting*/
-#bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-
-
-/*
+  .blog-main {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  /* Disused Sidebar modules for boxing content */
+  .sidebar-module {
+    padding: 15px;
+    margin: 0 -15px 0px;
+  }
+  .sidebar-module-inset {
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }
+  .sidebar-module-inset p:last-child,
+  .sidebar-module-inset ul:last-child,
+  .sidebar-module-inset ol:last-child {
+    margin-bottom: 0;
+  }
+  /*Used for the setting*/
+  #bottom {
+    position: relative;
+    top: 200px;
+  }
+  
+  
+  
+  /*
    * Blog posts
    */
 
