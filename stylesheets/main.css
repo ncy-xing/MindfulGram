@@ -31,7 +31,9 @@ body {
 }
 
 footer {
-  margin-top: auto;
+  margin-top: 200px;
+  text-align: center;
+  background-color: whitesmoke;
 
 }
 
@@ -61,7 +63,7 @@ h6,
 .container {
   /* colors from https://mdbootstrap.com/docs/standard/tools/design/gradients/ */
   background-image: linear-gradient(to bottom, rgba(168, 237, 234, 0.5), rgba(254, 214, 227, 0.5));
-    padding-bottom: 250px;
+    padding-bottom: 0px;
 
 
 }
@@ -217,7 +219,7 @@ h6,
 
 .blog-footer {
   padding: 40px 0;
-  color: #999;
+  color: gray;
   text-align: center;
   /* background-color: #f9f9f9;
   border-top: 1px solid #e5e5e5; */
@@ -305,6 +307,7 @@ h6,
 .right{
   float: right;
   right: 150px;
+  
 }
 
 .left{
