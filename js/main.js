@@ -1,9 +1,21 @@
 /**
+ * Like button toggle
+ */
+function clickLikeButton(btn){
+    if(btn.getAttribute("class") !== "btn-liked fa fa-heart"){
+        btn.setAttribute("class", "btn-liked fa fa-heart");
+    } else {
+        btn.setAttribute("class", "btn fa fa-heart");
+    }
+}
+
+/**
  * Load a single post into HTML
  */
 function loadPost(postData){
     // post container
     var post = document.createElement("div"); 
+    post.setAttribute("id", postData.id);
     post.setAttribute("class", "blog-post");
     var meta = document.createElement("div");
     meta.setAttribute("class", "blog-post-meta"); 
@@ -21,16 +33,23 @@ function loadPost(postData){
     timeStamp.setAttribute("class", "blog-post-timestamp");
     timeStamp.appendChild(document.createTextNode(" · ".concat(postData.timeStamp)));
 
-    // image and caption
+    // Image
     var img = document.createElement("img"); 
     img.setAttribute("src", "assets/" + postData.image + ".jpg");
     img.setAttribute("class", "blog-image");
+
+    // Like button
+    var btn = document.createElement("btn");
+    btn.setAttribute("onclick", "clickLikeButton(this)");
+    btn.setAttribute("class", "btn fa fa-heart");
+   
+    // Caption
     var caption = document.createElement("p");
     caption.setAttribute("class", "blog-post-text");
     caption.appendChild(document.createTextNode(postData.comment));
 
     // Write HTML
-    var postItems = [pfp, username, timeStamp, img, caption];
+    var postItems = [pfp, username, timeStamp, img, btn, caption];
     postItems.forEach(element => {
         meta.appendChild(element);
     });
@@ -55,11 +74,8 @@ for(let i = 0; i < usernames.length; i++){
     var pfp = "pfp-" + i;
     var img = "image-" + i;
 
-    console.log(pfp);
-    console.log(img);
-
     var postData = {
-        id: i,
+        id: "post-" + i,
         username: usernames[i],
         pfImage: pfp,
         timeStamp: timeStamps[i],

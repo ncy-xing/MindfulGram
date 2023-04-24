@@ -1,4 +1,16 @@
 /**
+ * Like button toggle
+ */
+function clickLikeButton(btn){
+    if(btn.getAttribute("class") !== "btn-liked fa fa-heart"){
+        btn.setAttribute("class", "btn-liked fa fa-heart");
+    } else {
+        btn.setAttribute("class", "btn fa fa-heart");
+    }
+}
+
+
+/**
  * Load a single post into HTML
  */
 function loadPost(postData){
@@ -25,15 +37,24 @@ function loadPost(postData){
     var img = document.createElement("img"); 
     img.setAttribute("src", "assets/" + postData.image + ".jpg");
     img.setAttribute("class", "blog-image");
+    
+    // Caption
     var caption = document.createElement("p");
     caption.setAttribute("class", "blog-post-text");
     caption.appendChild(document.createTextNode(postData.comment));
 
+    // Like button
+    var btn = document.createElement("btn");
+    btn.setAttribute("onclick", "clickLikeButton(this)");
+    btn.setAttribute("class", "btn fa fa-heart");
+       
+
     // Write HTML
-    var postItems = [pfp, username, timeStamp, img, caption];
-    postItems.forEach(element => {
+    var postItems = [pfp, username, timeStamp, img, btn, caption];
+        postItems.forEach(element => {
         meta.appendChild(element);
     });
+
     post.appendChild(meta);
     document.getElementById("post-body").appendChild(post);
 
