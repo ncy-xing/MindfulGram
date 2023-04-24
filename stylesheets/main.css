@@ -27,7 +27,7 @@ body {
   color: #555;
   display: flex;
   flex-direction: column;
-  min-height:100vh;
+  min-height: 100vh;
 }
 
 footer {
@@ -61,7 +61,7 @@ h6,
 .container {
   /* colors from https://mdbootstrap.com/docs/standard/tools/design/gradients/ */
   background-image: linear-gradient(to bottom, rgba(168, 237, 234, 0.5), rgba(254, 214, 227, 0.5));
-    padding-bottom: 250px;
+  padding-bottom: 250px;
 
 
 }
@@ -127,7 +127,7 @@ h6,
   font-family: Didot, Palatino, URW Palladio L, serif;
   font-weight: bold;
   font-size: 30px;
-  color:#fff;
+  color: #fff;
 }
 
 .blog-description {
@@ -139,37 +139,40 @@ h6,
 /*
    * Main column and sidebar layout
    */
-  
-  .blog-main {
-    font-size: 18px;
-    line-height: 1.5;
-  }
-  
-  /* Disused Sidebar modules for boxing content */
-  .sidebar-module {
-    padding: 15px;
-    margin: 0 -15px 0px;
-  }
-  .sidebar-module-inset {
-    padding: 15px;
-    background-color: #f5f5f5;
-    border-radius: 4px;
-  }
-  .sidebar-module-inset p:last-child,
-  .sidebar-module-inset ul:last-child,
-  .sidebar-module-inset ol:last-child {
-    margin-bottom: 0;
-  }
-  /*Used for the setting*/
-  #bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-  
-  
-  
-  /*
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Disused Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 0px;
+}
+
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+/*Used for the setting*/
+#bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+/*
    * Blog posts
    */
 
@@ -232,50 +235,55 @@ h6,
   */
 
 
-  .profile-image {
-    border-radius: 50% !important;
-    width: 50px;
-    height: 50px;
-    vertical-align:top;
-  }
-  
-  .btn {
-    background-color: transparent; /* no background */
-    border: none; /* Remove borders */
-    border-style: none;
-    border-color: transparent;
-  }
+.profile-image {
+  border-radius: 50% !important;
+  width: 50px;
+  height: 50px;
+  vertical-align: top;
+}
 
- .btn ::before{
-    content: "\f004"; /* FontAwesome heart icon */
-    background-color: transparent; /* no background */
-    border: none; /* Remove borders */
-    border-style: none;
-    border-color: transparent;
-    color: lightgray; /* icon color = text color */
-    padding: 6px 10px; /* Some padding */
-    font-size: 26px; /* icon = font size */
-    cursor: pointer; /* Mouse pointer on hover */
+.btn {
+  background-color: transparent;
+  /* no background */
+  border: none;
+  /* Remove borders */
+  border-style: none;
+  border-color: transparent;
+  color: lightgray;
+}
+
+.btn-liked {
+  color: red;
 }
 
 .btn:visited {
-    color: red; /* Changing the color of the button to red. */
-    background-color: transparent;
-    border-style: none;
+  color: red;
+}
+
+.btn:visited {
+  color: red;
+}
+
+.btn:focus {
+  color: red;
 }
 
 /* Darker background on mouse-over */
 .btn:hover {
-    background-color: transparent;
-    border-style: none;
-    color: gray;
+  color: gray;
 }
+
+.btn:active {
+  color: red;
+}
+
 
 /*
 * Prev/Next button format from W3 schools
 */
 .ctrlBotton1 {
-  background-color: transparent; /* Green */
+  background-color: transparent;
+  /* Green */
   color: black;
   border-color: black;
   padding: 15px;
@@ -289,7 +297,8 @@ h6,
 }
 
 .ctrlBotton2 {
-  background-color: transparent; /* Green */
+  background-color: transparent;
+  /* Green */
   color: black;
   border-color: black;
   padding: 15px;
@@ -302,13 +311,13 @@ h6,
   border-radius: 10px;
 }
 
-.right{
+.right {
   float: right;
   right: 150px;
 }
 
-.left{
-  float:left;
+.left {
+  float: left;
   left: 350px;
 }
 
@@ -321,12 +330,13 @@ h6,
  * Sidebar derived from Hyde.
  */
 
- .sidebar {
+.sidebar {
   text-align: center;
   padding: 2rem 1rem;
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, .5);
   background-color: #202020;
 }
+
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;
@@ -354,6 +364,7 @@ h6,
 .sidebar-nav {
   margin-bottom: 1rem;
 }
+
 .sidebar-nav-item {
   text-decoration: none;
   display: block;
@@ -373,7 +384,7 @@ a.sidebar-nav-item:hover {
   font-weight: bold;
 }
 
-.icon{
+.icon {
   padding-inline-start: 10px;
   padding-inline-end: 10px;
 }
