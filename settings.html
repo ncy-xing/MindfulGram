@@ -62,16 +62,24 @@
     </div>
 
     <div class="settings">
-        <h1>This is the settings page</h1>
+        <h1>Settings</h1>
 
         <!-- Rounded switch -->
         <label class="switch">
           <input type="checkbox">
-          <span class="slider round"> </span>
-          <span class="toggle-label">Timelimit</span>
+          <span class="slider round"></span>
+          <span class="toggle-label"></span>
+          Time limit
         </label>
         
-        <p>How long should the time limit be?</p>
+        <label for="limit">End session at:</label>
+          <select name="endtime" id="endtime">
+            <option value="10">10 minutes</option>
+            <option value="20">20 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="1">1 hour</option>
+          </select>
+        <br><br>
     </div> <!-- settings -->
 
 

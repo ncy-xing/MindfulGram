@@ -61,7 +61,7 @@ h6,
 .container {
   /* colors from https://mdbootstrap.com/docs/standard/tools/design/gradients/ */
   background-image: linear-gradient(to bottom, rgba(168, 237, 234, 0.5), rgba(254, 214, 227, 0.5));
-  padding-bottom: 250px;
+  padding-bottom: 1000px;
 
 
 }
@@ -223,7 +223,7 @@ h6,
 }
 
 .blog-footer p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 100;
 }
 
 /*
@@ -387,8 +387,10 @@ a.sidebar-nav-item:hover {
 
 
 .settings{
-  padding-left: 20%;
-  text-align: left;
+  margin: auto;
+  width: 50%;
+  display: block;
+  padding: 20px;
 }
 
 
@@ -397,10 +399,14 @@ a.sidebar-nav-item:hover {
 
 /* The switch - the box around the slider */
 .switch {
+  align-items: left;
+  border-radius: 100px;
   position: relative;
-  display: inline-block;
+  display: flex;
   width: 60px;
   height: 34px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 /* Hide default HTML checkbox */
@@ -461,5 +467,4 @@ input:checked + .slider:before {
 .toggle-label {
   margin-left: 60px;
   position: relative;
-  bottom: 15px;
 }
