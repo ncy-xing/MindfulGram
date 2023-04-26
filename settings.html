@@ -50,37 +50,38 @@
         <div class="blog-title icon">Mindfulgram</div>
       </div>
       <nav class="sidebar-nav">
-        <a class="sidebar-nav-item" href="#"><i class="fa fa-home icon"></i> Home</a>
+        <a class="sidebar-nav-item" href="./index.html"><i class="fa fa-home icon"></i> Home</a>
         <a class="sidebar-nav-item" href="#"><i class="fa fa-search icon"></i> Search</a>
         <a class="sidebar-nav-item" href="#"><i class="fa fa-compass icon"></i> Explore</a>
         <a class="sidebar-nav-item" href="#"><i class="fa fa-paper-plane icon"></i> Messages</a>
         <a class="sidebar-nav-item" href="#"><i class="fa fa-heart icon"></i> Notifications</a>
         <a class="sidebar-nav-item" href="#"><i class="fa fa-plus-square icon"></i> Create</a>
         <a class="sidebar-nav-item" href="#"><i class="fa fa-user icon"></i> Profile</a>
-        <a class="sidebar-nav-item" id="bottom" href="./settings.html"><i class="fa fa-gear icon"></i> Settings</a>
+        <a class="sidebar-nav-item" id="bottom" href="#"><i class="fa fa-gear icon"></i> Settings</a>
         <br><br>
     </div>
 
-    <!--POSTS-->
-    <div class="row blog-main" id="post-body">
-      <div class="col-sm-8">
-        <script src="js/main.js"></script>
+    <div class="settings">
+        <h1>Settings</h1>
 
-      </div><!-- /.blog-main -->
-    </div><!-- /.row -->
+        <!-- Rounded switch -->
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+          <span class="toggle-label"></span>
+          Time limit
+        </label>
+        
+        <label for="limit">End session at:</label>
+          <select name="endtime" id="endtime">
+            <option value="10">10 minutes</option>
+            <option value="20">20 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="1">1 hour</option>
+          </select>
+        <br><br>
+    </div> <!-- settings -->
 
-    <div>
-      
-
-        <button class="ctrlBotton1 sticky left" >Prev</button>
-        <form action = nextPage.html>
-          <button class="ctrlBotton2 sticky right">
-              Next
-          </button>
-        </form>
-      
-
-    </div>
 
     <footer class="blog-footer">
       <p>Formatting derived from <a href="http://getbootstrap.com">Bootstrap</a> by <a
