@@ -9,13 +9,13 @@ function clickLikeButton(btn){
     }
 }
 
+
 /**
  * Load a single post into HTML
  */
 function loadPost(postData){
     // post container
     var post = document.createElement("div"); 
-    post.setAttribute("id", postData.id);
     post.setAttribute("class", "blog-post");
     var meta = document.createElement("div");
     meta.setAttribute("class", "blog-post-meta"); 
@@ -33,26 +33,28 @@ function loadPost(postData){
     timeStamp.setAttribute("class", "blog-post-timestamp");
     timeStamp.appendChild(document.createTextNode(" · ".concat(postData.timeStamp)));
 
-    // Image
+    // image and caption
     var img = document.createElement("img"); 
     img.setAttribute("src", "assets/" + postData.image + ".jpg");
     img.setAttribute("class", "blog-image");
-
-    // Like button
-    var btn = document.createElement("btn");
-    btn.setAttribute("onclick", "clickLikeButton(this)");
-    btn.setAttribute("class", "btn fa fa-heart");
-   
+    
     // Caption
     var caption = document.createElement("p");
     caption.setAttribute("class", "blog-post-text");
     caption.appendChild(document.createTextNode(postData.comment));
 
+    // Like button
+    var btn = document.createElement("btn");
+    btn.setAttribute("onclick", "clickLikeButton(this)");
+    btn.setAttribute("class", "btn fa fa-heart");
+       
+
     // Write HTML
     var postItems = [pfp, username, timeStamp, img, btn, caption];
-    postItems.forEach(element => {
+        postItems.forEach(element => {
         meta.appendChild(element);
     });
+
     post.appendChild(meta);
     document.getElementById("post-body").appendChild(post);
 
@@ -61,21 +63,24 @@ function loadPost(postData){
 /**
  * Static post data
  */
-let usernames = ["Friendly_Flower", "lily205", "l.ipsum", "dolorduvec", "FreshRose"]
-let timeStamps = ["3 hours ago", "1 day ago", "2 days ago", "1 week ago", "3 months ago"]
-let comments = ["These are nice ducks.",
-    "Hi! hope everyone is doing well.",
-    "Look at these nice flowers!",
-    "HCI is the coolest class.",
-    "Happy spring, everyone!"]
+let usernames = ["harryPotterGF_001", "maj3rSick", "lil_$ean8arker", "NormanHacker02", "notLauraT"]
+let timeStamps = ["1 hours ago", "3 hour ago", "2 days ago", "1 months ago", "3 months ago",]
+let comments = ["my patronus is soo cute ;))",
+    "Good day on my mind #sun",
+    "#wouldRatherBeCoding",
+    "Keeping my prinicples.",
+    "Maine sunset."]
 
 
 for(let i = 0; i < usernames.length; i++){
-    var pfp = "pfp-" + i;
-    var img = "image-" + i;
+    var pfp = "pfp-" + (i+ 5);
+    var img = "image-" + (i+5);
+
+    console.log(pfp);
+    console.log(img);
 
     var postData = {
-        id: "post-" + i,
+        id: i,
         username: usernames[i],
         pfImage: pfp,
         timeStamp: timeStamps[i],
