@@ -43,6 +43,18 @@
   <div class="container">
     <div class="blog-header">
     </div>
+    
+    <div id="countdown" class="countdown">
+      <svg>
+        <circle id="countdown-circle" r="18" cx="20" cy="20"></circle>
+      </svg>
+      <div id="countdown-number"></div>
+    </div>
+
+    <!--COUNTDOWN-->
+    <div class="blog-post blog-post-meta">
+      <button onclick="runTimer()">Test Button</button>
+    </div>
 
     <!--SIDEBAR-->
     <div class="sidebar">
@@ -65,20 +77,19 @@
     <div class="row blog-main" id="post-body">
       <div class="col-sm-8">
         <script src="js/main.js"></script>
-
       </div><!-- /.blog-main -->
     </div><!-- /.row -->
 
     <div>
-      
 
-        <button class="ctrlBotton1 sticky left" >Prev</button>
-        <form action = nextPage.html>
-          <button class="ctrlBotton2 sticky right">
-              Next
-          </button>
-        </form>
-      
+
+      <button class="ctrlBotton1 sticky left">Prev</button>
+      <form action=nextPage.html>
+        <button class="ctrlBotton2 sticky right">
+          Next
+        </button>
+      </form>
+
 
     </div>
 

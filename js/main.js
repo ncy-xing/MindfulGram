@@ -1,8 +1,8 @@
 /**
  * Like button toggle
  */
-function clickLikeButton(btn){
-    if(btn.getAttribute("class") !== "btn-liked fa fa-heart"){
+function clickLikeButton(btn) {
+    if (btn.getAttribute("class") !== "btn-liked fa fa-heart") {
         btn.setAttribute("class", "btn-liked fa fa-heart");
     } else {
         btn.setAttribute("class", "btn fa fa-heart");
@@ -12,13 +12,13 @@ function clickLikeButton(btn){
 /**
  * Load a single post into HTML
  */
-function loadPost(postData){
+function loadPost(postData) {
     // post container
-    var post = document.createElement("div"); 
+    var post = document.createElement("div");
     post.setAttribute("id", postData.id);
     post.setAttribute("class", "blog-post");
     var meta = document.createElement("div");
-    meta.setAttribute("class", "blog-post-meta"); 
+    meta.setAttribute("class", "blog-post-meta");
 
     // Metadata
     var pfp = document.createElement("img");
@@ -34,7 +34,7 @@ function loadPost(postData){
     timeStamp.appendChild(document.createTextNode(" · ".concat(postData.timeStamp)));
 
     // Image
-    var img = document.createElement("img"); 
+    var img = document.createElement("img");
     img.setAttribute("src", "assets/" + postData.image + ".jpg");
     img.setAttribute("class", "blog-image");
 
@@ -42,7 +42,7 @@ function loadPost(postData){
     var btn = document.createElement("btn");
     btn.setAttribute("onclick", "clickLikeButton(this)");
     btn.setAttribute("class", "btn fa fa-heart");
-   
+
     // Caption
     var caption = document.createElement("p");
     caption.setAttribute("class", "blog-post-text");
@@ -70,7 +70,7 @@ let comments = ["These are nice ducks.",
     "Happy spring, everyone!"]
 
 
-for(let i = 0; i < usernames.length; i++){
+for (let i = 0; i < usernames.length; i++) {
     var pfp = "pfp-" + i;
     var img = "image-" + i;
 
@@ -85,3 +85,34 @@ for(let i = 0; i < usernames.length; i++){
 
     loadPost(postData);
 }
+
+/*
+ * Runs countdown timer, updating animation for timer and moving to end screen on finish.
+ */
+function runTimer() {
+    let countdownSec = 4;
+    document.getElementById("countdown-circle").style.animation = "countdown " + countdownSec + "s linear forwards";
+    let countdownNumberEl = document.getElementById('countdown-number');
+
+    // Prepare end screen
+    setTimeout(endSession, 4000);
+    // Update time remaining text
+    setInterval(function () {
+        countdownNumberEl.textContent = --countdownSec + "m";
+    }, 1000);
+    setTimeout(clearInterval(interval), 4000)
+}
+
+/*
+ * Redirects page to end session page.
+ */
+function endSession() {
+    window.location.replace("end.html");
+}
+
+function initialize(){
+    let countdownSec = 4;
+    document.getElementById('countdown-number').textContent = countdownSec + "m";
+}
+
+initialize();
