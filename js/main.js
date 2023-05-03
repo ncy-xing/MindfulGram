@@ -85,34 +85,3 @@ for (let i = 0; i < usernames.length; i++) {
 
     loadPost(postData);
 }
-
-/*
- * Runs countdown timer, updating animation for timer and moving to end screen on finish.
- */
-function runTimer() {
-    let countdownSec = 4;
-    document.getElementById("countdown-circle").style.animation = "countdown " + countdownSec + "s linear forwards";
-    let countdownNumberEl = document.getElementById('countdown-number');
-
-    // Prepare end screen
-    setTimeout(endSession, 4000);
-    // Update time remaining text
-    setInterval(function () {
-        countdownNumberEl.textContent = --countdownSec + "m";
-    }, 1000);
-    setTimeout(clearInterval(interval), 4000)
-}
-
-/*
- * Redirects page to end session page.
- */
-function endSession() {
-    window.location.replace("end.html");
-}
-
-function initialize(){
-    let countdownSec = 4;
-    document.getElementById('countdown-number').textContent = countdownSec + "m";
-}
-
-initialize();

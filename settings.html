@@ -28,7 +28,6 @@
 
   <!-- Custom styles for this template -->
   <link href="blog.css" rel="stylesheet">
-  <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
   <style>
     * {
       margin: 0;
@@ -64,12 +63,14 @@
     <div class="settings">
         <h1>Settings</h1>
 
+        <script src="js/timer.js"></script>
         <!-- Rounded switch -->
         <p>
           <label for="limit">Time limit:</label>
           <select name="endtime" id="endtime">
             <option value="0">Off</option>
-            <option value="2">2 minutes (DEMO)</option>
+            <option value="1">1 minute (DEMO ONLY)</option>
+            <option value="2">2 minutes (DEMO ONLY)</option>
             <option value="10">10 minutes</option>
             <option value="15">15 minutes</option>
             <option value="20">20 minutes</option>
@@ -80,22 +81,30 @@
             <option value="120">120 minutes</option>
           </select>
 
-          <button>Confirm</button>
+          <button onclick="setTimer(); showConfirmation();">Set Time</button>
         
         </p>
+
+        <p>
+          <form action="index.html" id="saved-confirmation">
+            <div style="line-height: 40px; color: green;">Time saved!</div>
+            <button>Return Home</button>
+          </form>
+        </p>
+
+        <script src="js/settings.js"></script>
+        <script type="text/javascript">
+            hideConfirmation();
+        </script>
         
     </div> <!-- settings -->
 
   </div><!-- /.container -->
 
-
   <!-- Bootstrap core JavaScript -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-  <script src="../../dist/js/bootstrap.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 
 </html>

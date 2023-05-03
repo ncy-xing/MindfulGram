@@ -49,13 +49,19 @@ h5,
 .h5,
 h6,
 .h6 {
-  text-align: center;
-  padding-top: 100px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #333;
 }
 
+.end-screen{
+  text-align: center;
+  padding-top: 100px;
+}
+
+p {
+  padding-top: 20px;
+}
 
 /*
    * Override Bootstrap's default container.
@@ -281,9 +287,8 @@ h6,
 * Prev/Next button format from W3 schools
 */
 .ctrlBotton1 {
-  margin-top: 10px;
+  margin-bottom: 15px;
   background-color: transparent;
-  /* Green */
   color: black;
   border-color: black;
   padding: 15px;
@@ -291,15 +296,13 @@ h6,
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 2px 2px;
   cursor: pointer;
   border-radius: 10px;
 }
 
 .ctrlBotton2 {
-  margin-top: 10px;
+  margin-bottom: 15px;
   background-color: transparent;
-  /* Green */
   color: black;
   border-color: black;
   padding: 15px;
@@ -307,7 +310,6 @@ h6,
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 2px 2px;
   cursor: pointer;
   border-radius: 10px;
 }
@@ -505,7 +507,7 @@ svg circle {
   stroke-linecap: round;
   stroke-width: 3px;
   stroke: lightslategray;
-  fill: none;
+  fill: gainsboro;
   /* animation: countdown 4s linear forwards; */
 }
 
