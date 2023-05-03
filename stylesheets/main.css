@@ -281,6 +281,7 @@ h6,
 * Prev/Next button format from W3 schools
 */
 .ctrlBotton1 {
+  margin-top: 10px;
   background-color: transparent;
   /* Green */
   color: black;
@@ -296,6 +297,7 @@ h6,
 }
 
 .ctrlBotton2 {
+  margin-top: 10px;
   background-color: transparent;
   /* Green */
   color: black;
