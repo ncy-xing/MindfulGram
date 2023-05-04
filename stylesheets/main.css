@@ -49,12 +49,19 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-top: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #333;
 }
 
+.end-screen{
+  text-align: center;
+  padding-top: 100px;
+}
+
+p {
+  padding-top: 20px;
+}
 
 /*
    * Override Bootstrap's default container.
@@ -280,8 +287,8 @@ h6,
 * Prev/Next button format from W3 schools
 */
 .ctrlBotton1 {
+  margin-bottom: 15px;
   background-color: transparent;
-  /* Green */
   color: black;
   border-color: black;
   padding: 15px;
@@ -289,14 +296,13 @@ h6,
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 2px 2px;
   cursor: pointer;
   border-radius: 10px;
 }
 
 .ctrlBotton2 {
+  margin-bottom: 15px;
   background-color: transparent;
-  /* Green */
   color: black;
   border-color: black;
   padding: 15px;
@@ -304,7 +310,6 @@ h6,
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 2px 2px;
   cursor: pointer;
   border-radius: 10px;
 }
@@ -470,4 +475,53 @@ input:checked + .slider:before {
 .toggle-label {
   margin-left: 60px;
   position: relative;
+}
+
+#countdown {
+  position: fixed;
+  right: 40px; top: 50px;
+  margin: auto;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+#countdown-number {
+  position: fixed;
+  color: lightslategray;
+  display: inline-block;
+  top: 30px; 
+  right: 30px;
+}
+
+svg {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 113px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 3px;
+  stroke: lightslategray;
+  fill: gainsboro;
+  /* animation: countdown 4s linear forwards; */
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 113px;
+  }
+}
+
+#timeout-icon {
+  position: relative !important;
+  display: block !important;
+  margin: auto !important;
 }

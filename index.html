@@ -28,7 +28,6 @@
 
   <!-- Custom styles for this template -->
   <link href="blog.css" rel="stylesheet">
-  <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
   <style>
     * {
       margin: 0;
@@ -43,6 +42,20 @@
   <div class="container">
     <div class="blog-header">
     </div>
+
+    <div id="countdown" class="countdown">
+      <svg>
+        <circle id="countdown-circle" r="18" cx="20" cy="20"></circle>
+      </svg>
+      <div id="countdown-number"></div>
+    </div>
+
+    <!--TIMER-->
+    <script src="js/timer.js"></script>
+    <script type="text/javascript">
+      initializeTimer();
+      runTimer();
+    </script>
 
     <!--SIDEBAR-->
     <div class="sidebar">
@@ -65,27 +78,22 @@
     <div class="row blog-main" id="post-body">
       <div class="col-sm-8">
         <script src="js/main.js"></script>
-
       </div><!-- /.blog-main -->
     </div><!-- /.row -->
 
     <div>
-      
 
-        <button class="ctrlBotton1 sticky left" >Prev</button>
-        <form action = nextPage.html>
-          <button class="ctrlBotton2 sticky right">
-              Next
-          </button>
-        </form>
-      
+
+      <button class="ctrlBotton1 sticky left">Prev</button>
+      <form action=nextPage.html>
+        <button class="ctrlBotton2 sticky right">
+          Next
+        </button>
+      </form>
+
 
     </div>
 
-    <footer class="blog-footer">
-      <p>Formatting derived from <a href="http://getbootstrap.com">Bootstrap</a> by <a
-          href="https://twitter.com/mdo">@mdo</a>.</p>
-    </footer>
 
   </div><!-- /.container -->
 
@@ -94,9 +102,6 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-  <script src="../../dist/js/bootstrap.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 
 </html>
