@@ -61,7 +61,7 @@ function loadPost(postData) {
 /**
  * Static post data
  */
-let pageCounter = 0;
+let pageCounter = 0; // minimum id of currently displayed post
 
 let usernames = ["Friendly_Flower", "lily205", "l.ipsum", "dolorduvec", "FreshRose", "harryPotterGF_001", "maj3rSick", "lil_$ean8arker", "NormanHacker02", "notLauraT"]
 let timeStamps = ["3 hours ago", "1 day ago", "2 days ago", "1 week ago", "3 months ago", "1 hours ago", "3 hour ago", "2 days ago", "1 months ago", "3 months ago"]
@@ -75,6 +75,7 @@ let comments = ["These are nice ducks.",
     "#wouldRatherBeCoding",
     "Keeping my prinicples.",
     "Maine sunset."]
+
 
 
 function loadPostList() {
@@ -98,21 +99,26 @@ function loadPostList() {
 
 }
 
-function clearPrevPosts(){
-    for(var i = pageCounter - 5; i < pageCounter; i++){
+/*
+ * Removes the next 5 posts starting from the given index. 
+ * @param {} startIndex 
+ */
+function clearPosts(startIndex){
+    for(i = startIndex; i < startIndex + 5; i++){
         var oldPost = document.getElementById("post-" + i);
         oldPost.remove();
     }
 }
 
-function getPageCounter(int) {
-    if (pageCounter == 0) {
-        pageCounter += int
-    }
-    else {
-        pageCounter = 0;
-    }
-    clearPrevPosts();
+/*
+ * Reloads the posts starting at the given index. 
+ * @param {*} int 
+ */
+function getPageCounter(startIndex) {    
+    clearPosts(pageCounter);
+
+    pageCounter = startIndex;
+
     loadPostList();
     window.location.replace("#");
 
