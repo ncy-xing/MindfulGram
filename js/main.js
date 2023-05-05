@@ -1,8 +1,8 @@
 /**
  * Like button toggle
  */
-function clickLikeButton(btn){
-    if(btn.getAttribute("class") !== "btn-liked fa fa-heart"){
+function clickLikeButton(btn) {
+    if (btn.getAttribute("class") !== "btn-liked fa fa-heart") {
         btn.setAttribute("class", "btn-liked fa fa-heart");
     } else {
         btn.setAttribute("class", "btn fa fa-heart");
@@ -12,13 +12,13 @@ function clickLikeButton(btn){
 /**
  * Load a single post into HTML
  */
-function loadPost(postData){
+function loadPost(postData) {
     // post container
-    var post = document.createElement("div"); 
+    var post = document.createElement("div");
     post.setAttribute("id", postData.id);
     post.setAttribute("class", "blog-post");
     var meta = document.createElement("div");
-    meta.setAttribute("class", "blog-post-meta"); 
+    meta.setAttribute("class", "blog-post-meta");
 
     // Metadata
     var pfp = document.createElement("img");
@@ -34,7 +34,7 @@ function loadPost(postData){
     timeStamp.appendChild(document.createTextNode(" · ".concat(postData.timeStamp)));
 
     // Image
-    var img = document.createElement("img"); 
+    var img = document.createElement("img");
     img.setAttribute("src", "assets/" + postData.image + ".jpg");
     img.setAttribute("class", "blog-image");
 
@@ -42,7 +42,7 @@ function loadPost(postData){
     var btn = document.createElement("btn");
     btn.setAttribute("onclick", "clickLikeButton(this)");
     btn.setAttribute("class", "btn fa fa-heart");
-   
+
     // Caption
     var caption = document.createElement("p");
     caption.setAttribute("class", "blog-post-text");
@@ -61,27 +61,61 @@ function loadPost(postData){
 /**
  * Static post data
  */
-let usernames = ["Friendly_Flower", "lily205", "l.ipsum", "dolorduvec", "FreshRose"]
-let timeStamps = ["3 hours ago", "1 day ago", "2 days ago", "1 week ago", "3 months ago"]
+let pageCounter = 0;
+
+let usernames = ["Friendly_Flower", "lily205", "l.ipsum", "dolorduvec", "FreshRose", "harryPotterGF_001", "maj3rSick", "lil_$ean8arker", "NormanHacker02", "notLauraT"]
+let timeStamps = ["3 hours ago", "1 day ago", "2 days ago", "1 week ago", "3 months ago", "1 hours ago", "3 hour ago", "2 days ago", "1 months ago", "3 months ago"]
 let comments = ["These are nice ducks.",
     "Hi! hope everyone is doing well.",
     "Look at these nice flowers!",
     "HCI is the coolest class.",
-    "Happy spring, everyone!"]
+    "Happy spring, everyone!",
+    "my patronus is soo cute ;))",
+    "Good day on my mind #sun",
+    "#wouldRatherBeCoding",
+    "Keeping my prinicples.",
+    "Maine sunset."]
 
 
-for(let i = 0; i < usernames.length; i++){
-    var pfp = "pfp-" + i;
-    var img = "image-" + i;
+function loadPostList() {
+    for (var i = 0; i < 5; i++) {
+        var counter = pageCounter + i;
+        var pfp = "pfp-" + counter;
+        var img = "image-" + counter;
 
-    var postData = {
-        id: "post-" + i,
-        username: usernames[i],
-        pfImage: pfp,
-        timeStamp: timeStamps[i],
-        image: img,
-        comment: comments[i],
+        var postData = {
+            id: "post-" + counter,
+            username: usernames[counter],
+            pfImage: pfp,
+            timeStamp: timeStamps[counter],
+            image: img,
+            comment: comments[counter],
+        }
+
+        loadPost(postData);
     }
 
-    loadPost(postData);
+
 }
+
+function clearPrevPosts(){
+    for(var i = pageCounter - 5; i < pageCounter; i++){
+        var oldPost = document.getElementById("post-" + i);
+        oldPost.remove();
+    }
+}
+
+function getPageCounter(int) {
+    if (pageCounter == 0) {
+        pageCounter += int
+    }
+    else {
+        pageCounter = 0;
+    }
+    clearPrevPosts();
+    loadPostList();
+    window.location.replace("#");
+
+}
+
+loadPostList();
