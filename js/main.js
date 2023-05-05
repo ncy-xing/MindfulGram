@@ -61,27 +61,67 @@ function loadPost(postData) {
 /**
  * Static post data
  */
-let usernames = ["Friendly_Flower", "lily205", "l.ipsum", "dolorduvec", "FreshRose"]
-let timeStamps = ["3 hours ago", "1 day ago", "2 days ago", "1 week ago", "3 months ago"]
+let pageCounter = 0; // minimum id of currently displayed post
+
+let usernames = ["Friendly_Flower", "lily205", "l.ipsum", "dolorduvec", "FreshRose", "harryPotterGF_001", "maj3rSick", "lil_$ean8arker", "NormanHacker02", "notLauraT"]
+let timeStamps = ["3 hours ago", "1 day ago", "2 days ago", "1 week ago", "3 months ago", "1 hours ago", "3 hour ago", "2 days ago", "1 months ago", "3 months ago"]
 let comments = ["These are nice ducks.",
     "Hi! hope everyone is doing well.",
     "Look at these nice flowers!",
     "HCI is the coolest class.",
-    "Happy spring, everyone!"]
+    "Happy spring, everyone!",
+    "my patronus is soo cute ;))",
+    "Good day on my mind #sun",
+    "#wouldRatherBeCoding",
+    "Keeping my prinicples.",
+    "Maine sunset."]
 
 
-for (let i = 0; i < usernames.length; i++) {
-    var pfp = "pfp-" + i;
-    var img = "image-" + i;
 
-    var postData = {
-        id: "post-" + i,
-        username: usernames[i],
-        pfImage: pfp,
-        timeStamp: timeStamps[i],
-        image: img,
-        comment: comments[i],
+function loadPostList() {
+    for (var i = 0; i < 5; i++) {
+        var counter = pageCounter + i;
+        var pfp = "pfp-" + counter;
+        var img = "image-" + counter;
+
+        var postData = {
+            id: "post-" + counter,
+            username: usernames[counter],
+            pfImage: pfp,
+            timeStamp: timeStamps[counter],
+            image: img,
+            comment: comments[counter],
+        }
+
+        loadPost(postData);
     }
 
-    loadPost(postData);
+
 }
+
+/*
+ * Removes the next 5 posts starting from the given index. 
+ * @param {} startIndex 
+ */
+function clearPosts(startIndex){
+    for(i = startIndex; i < startIndex + 5; i++){
+        var oldPost = document.getElementById("post-" + i);
+        oldPost.remove();
+    }
+}
+
+/*
+ * Reloads the posts starting at the given index. 
+ * @param {*} int 
+ */
+function getPageCounter(startIndex) {    
+    clearPosts(pageCounter);
+
+    pageCounter = startIndex;
+
+    loadPostList();
+    window.location.replace("#");
+
+}
+
+loadPostList();
